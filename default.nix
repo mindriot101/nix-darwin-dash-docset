@@ -16,8 +16,7 @@ stdenv.mkDerivation {
   buildPhase = ''
     mkdir -p nix-darwin.docset/Contents/Resources/Documents/
 
-    # why no cert validation?
-    curl -kLo nix-darwin.docset/Contents/Resources/Documents/index.html https://daiderd.com/nix-darwin/manual/index.html
+    cp index.html nix-darwin.docset/Contents/Resources/Documents/index.html
 
     cp Info.plist nix-darwin.docset/Contents/
 
